@@ -243,7 +243,7 @@
     color: #24292e;
     display: flex;
     align-items: center;
-    font-size: 12px;
+    font-size: 50px;
     padding: 3px 10px;
     border: 1px solid rgba(27,31,35,.2);
     border-radius: 3px;
@@ -310,33 +310,59 @@
 
 
   <!-- Resources -->
-  <h2>Información</h2>
-
-  <form>
-      <label>Discapacidad:</label> 
-      <select name="discapacidad" id="discapacidad" [(ngModel)]="opcionSeleccionado" (change)="capturar();">
-        <option value="ciegas">Personas ciegas</option>
-        <option value="baja_vision">Personas con baja vision</option>
-        <option value="hipoacusia">Persona con hipoacusia</option>
-        <option value="señante">Persona sordo señante</option>
-        <option value="oralizada">Personas sordo oralizada</option>
-        <option value="sordoceguera">Persona sordo ceguera</option>
-        <option value="miembros_superiores">Persona con compromiso de miembros superiores</option>
-        <option value="miembros_inferiores">Persona con compromiso de miembros inferiores</option>
-        <option value="miembros_superiores_inferiores">Persona con compromiso de miembros superiores e inferiores</option>
-        <option value="intelectual">Discapacidad intelectual</option>
-        <option value="psicosocial_mental">Discapacidad psicosocial mental</option>
-        <option value="multiple">Discapacidad multiple</option>
-        <option value="talla_baja">Discapacidad talla baja</option>
-      </select><br><br>
-
-      <p>Apoyo de accesibilidad fisica:</p>
+  <h2>Formulario de inscripción</h2><br>
+<div style="border-width:1px;border-style:solid;border-color:black;width: 500px;">
+  <div style="border-width:1px;border-style:solid;border-color:black;font-size: x-large;display: flex; justify-content: center;">Otra informacion</div>
+  <div style="margin:5%;">
+    <form>
+      <div>
+        <label >Género:</label><br>
+      <input type="text" style="width: 370px;"><br><br>
+      </div>
+      <div>
+        <label >Lugar de donde se conecta:</label><br>
+        <input type="text" id="lname" name="lname" style="width: 370px;"><br><br>
+      </div>
+      <div>
+        <label >Sufragó en las últimas elecciones:</label><br>
+        <input type="text" id="Genero" name="Genero" style="width: 370px;"><br><br>
+      </div>
+      <div>
+        <label >Grupo étnico:</label><br>
+        <input type="text" id="lname" name="lname" style="width: 370px;"><br><br>
+      </div>
+      <div>
+        <label >Estado civil:</label><br>
+        <input type="text" id="Genero" name="Genero" style="width: 370px;"><br><br>
+      </div>
+      <div>
+        <label>Discapacidad:</label> <br>
+        <select name="discapacidad" id="discapacidad" [(ngModel)]="opcionSeleccionado" (change)="capturar();">
+          <option value="ciegas">Personas ciegas</option>
+          <option value="baja_vision">Personas con baja vision</option>
+          <option value="hipoacusia">Persona con hipoacusia</option>
+          <option value="señante">Persona sordo señante</option>
+          <option value="oralizada">Personas sordo oralizada</option>
+          <option value="sordoceguera">Persona sordo ceguera</option>
+          <option value="miembros_superiores">Persona con compromiso de miembros superiores</option>
+          <option value="miembros_inferiores">Persona con compromiso de miembros inferiores</option>
+          <option value="miembros_superiores_inferiores">Persona con compromiso de miembros superiores e inferiores</option>
+          <option value="intelectual">Discapacidad intelectual</option>
+          <option value="psicosocial_mental">Discapacidad psicosocial mental</option>
+          <option value="multiple">Discapacidad multiple</option>
+          <option value="talla_baja">Discapacidad talla baja</option>
+        </select><br><br>
+      </div>
+      
+      <div>
+        <p>Apoyo de accesibilidad fisica:</p>
         <input type="radio" id="apoyo_escaleras" name="accesibilidad" value="apoyo_escaleras">
         <label for="apoyo_escaleras">Apoyo por dificultad en emplear escaleras</label><br>
 
         <input type="radio" id="no_apoyo_escaleras" name="accesibilidad" value="no_apoyo_escaleras">
         <label for="no_apoyo_escaleras">No requiero apoyo de accesibilidad fisica</label><br><br>
-
+      </div>
+      
       <div *ngIf="opcionSeleccionado == 'ciegas'">
         <p>Apoyo de medio de lectura:</p>
         <input type="radio" id="apoyo_audio" name="lectura" value="apoyo_audio">
@@ -396,6 +422,9 @@
       
 
   </form>
+  </div>
+</div>
+  
 
 </div>
 
