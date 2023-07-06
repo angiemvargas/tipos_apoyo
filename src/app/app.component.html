@@ -264,6 +264,12 @@
     margin-right: 4px;
   }
 
+  .is-required {
+    content: "* ";
+		color: red;
+		font-weight: bold;
+  }
+
   svg#clouds {
     position: fixed;
     bottom: -160px;
@@ -311,32 +317,32 @@
 
   <!-- Resources -->
   <h2>Formulario de inscripción</h2><br>
-<div style="border-width:1px;border-style:solid;border-color:black;width: 500px;">
+<div style="border-width:1px;border-style:solid;border-color:black;width: 550px;">
   <div style="border-width:1px;border-style:solid;border-color:black;font-size: x-large;display: flex; justify-content: center;">Otra informacion</div>
   <div style="margin:5%;">
     <form>
       <div>
-        <label >Género:</label><br>
-      <input type="text" style="width: 370px;"><br><br>
+        <label>Género:</label><label class="is-required">*</label><br>
+        <input type="text" style="width: 370px;"><br><br>
       </div>
       <div>
-        <label >Lugar de donde se conecta:</label><br>
+        <label>Lugar de donde se conecta:</label><label class="is-required">*</label><br>
         <input type="text" id="lname" name="lname" style="width: 370px;"><br><br>
       </div>
       <div>
-        <label >Sufragó en las últimas elecciones:</label><br>
+        <label>Sufragó en las últimas elecciones:</label><label class="is-required">*</label><br>
         <input type="text" id="Genero" name="Genero" style="width: 370px;"><br><br>
       </div>
       <div>
-        <label >Grupo étnico:</label><br>
+        <label>Grupo étnico:</label><label class="is-required">*</label><br>
         <input type="text" id="lname" name="lname" style="width: 370px;"><br><br>
       </div>
       <div>
-        <label >Estado civil:</label><br>
+        <label>Estado civil:</label><label class="is-required">*</label><br>
         <input type="text" id="Genero" name="Genero" style="width: 370px;"><br><br>
       </div>
       <div>
-        <label>Discapacidad:</label> <br>
+        <label>Discapacidad:</label><label class="is-required">*</label><br>
         <select name="discapacidad" id="discapacidad" [(ngModel)]="opcionSeleccionado" (change)="capturar();">
           <option value="ciegas">Personas ciegas</option>
           <option value="baja_vision">Personas con baja vision</option>
@@ -355,6 +361,7 @@
       </div>
       
       <div>
+        <label>Tipo de apoyo que solicita para la presentación del examen de admisión:</label><label class="is-required">*</label><br><br>
         <p>Apoyo de accesibilidad fisica:</p>
         <input type="radio" id="apoyo_escaleras" name="accesibilidad" value="apoyo_escaleras">
         <label for="apoyo_escaleras">Apoyo por dificultad en emplear escaleras</label><br>
@@ -420,7 +427,6 @@
           <label for="no_apoyo_comunicacion">No requiero apoyo</label><br><br>
       </div>
       
-
   </form>
   </div>
 </div>
